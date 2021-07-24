@@ -59,4 +59,4 @@ jobs:
         with:
           app-name: 'hcmutbot'
           slot-name: 'production'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_fb548c35a19b40fea5afef9a478214df }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_6dfc04203ccb49d1ad0201f114c6ff3a }}
