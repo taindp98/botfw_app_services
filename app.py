@@ -5,7 +5,7 @@ import sys
 import traceback
 from datetime import datetime
 
-from aiohttp import web as app
+from aiohttp import web
 from aiohttp.web import Request, Response, json_response
 from botbuilder.core import (
     BotFrameworkAdapterSettings,
@@ -77,13 +77,13 @@ async def messages(req: Request) -> Response:
     return Response(status=201)
 
 
-# APP = web.Application(middlewares=[aiohttp_error_middleware])
-APP = app.Application(middlewares=[aiohttp_error_middleware])
+APP = web.Application(middlewares=[aiohttp_error_middleware])
+# APP = app.Application(middlewares=[aiohttp_error_middleware])
 APP.router.add_post("/api/messages", messages)
 
 if __name__ == "__main__":
     try:
-        # web.run_app(APP, host="localhost", port=CONFIG.PORT)
-        app.run_app(APP, host="localhost", port=CONFIG.PORT)
+        web.run_app(APP, host="localhost", port=CONFIG.PORT)
+        # app.run_app(APP, host="localhost", port=CONFIG.PORT)
     except Exception as error:
         raise error

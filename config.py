@@ -8,5 +8,5 @@ class DefaultConfig:
     """ Bot Configuration """
 
     PORT = 3978
-    APP_ID = os.environ.get("MicrosoftAppId", "")
-    APP_PASSWORD = os.environ.get("MicrosoftAppPassword", "")
+    APP_ID = os.environ.get("MicrosoftAppId", "df6cd3d9-0608-458f-83b1-1e376705bb23")
+    APP_PASSWORD = os.environ.get("MicrosoftAppPassword", "chatbot2020")
